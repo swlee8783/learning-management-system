@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 public class MainController {
 
     @RequestMapping("/")
-    public String index(){
+    public String index() {
         return "index";
     }
 
@@ -40,6 +40,5 @@ public class MainController {
 
         printWriter.write(msg);
         printWriter.close();
-
     }
 }
