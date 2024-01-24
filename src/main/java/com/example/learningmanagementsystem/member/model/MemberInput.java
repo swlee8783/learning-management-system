@@ -1,7 +1,9 @@
-package com.example.learningmanagementsystem.member;
+package com.example.learningmanagementsystem.member.model;
 
 import lombok.Data;
+import lombok.ToString;
 
+@ToString
 @Data
 public class MemberInput {
 

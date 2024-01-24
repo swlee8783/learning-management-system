@@ -2,3 +2,15 @@ spring:
   thymeleaf:
     suffix: .jsp
     prefix: classpath:/templates/
+
+  datasource:
+    url:
+    driver-class-name:
+    username:
+
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
