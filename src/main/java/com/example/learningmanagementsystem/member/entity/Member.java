@@ -18,6 +18,7 @@ public class Member {
     private LocalDateTime regDt;
 
     private boolean isEmailAuthorized;
+    private LocalDateTime emailAuthDt;
     private String emailAuthKey;
 
 }

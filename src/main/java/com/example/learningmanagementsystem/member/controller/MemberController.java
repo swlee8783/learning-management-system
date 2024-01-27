@@ -32,4 +32,15 @@ public class MemberController {
         return "member/register_complete";
 
     }
+
+    @GetMapping("/member/email-auth")
+    public String emailAuth(Model model, HttpServletRequest request){
+        String id = request.getParameter("id");
+        System.out.println(id);
+
+        boolean result = memberService.emailAuth(id);
+        model.addAttribute("result", result);
+
+        return "member/email-auth";
+    }
 }

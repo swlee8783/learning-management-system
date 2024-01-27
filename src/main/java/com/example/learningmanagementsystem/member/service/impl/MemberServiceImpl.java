@@ -46,4 +46,20 @@ public class MemberServiceImpl implements MemberService {
         mailComponents.sendMail(email, subject, text);
         return true;
     }
+
+    @Override
+    public boolean emailAuth(String uuid) {
+
+        Optional<Member> optionalMember = memberRepository.findByEmailAuthKey(uuid);
+        if(!optionalMember.isPresent()) {
+            return false;
+        }
+
+        Member member = optionalMember.get();
+        member.setEmailAuthorized(true);
+        member.setEmailAuthDt(LocalDateTime.now());
+        memberRepository.save(member);
+
+        return true;
+    }
 }
